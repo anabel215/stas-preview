@@ -1,0 +1,117 @@
+:root{
+    --inter:'Inter', sans-serif;
+    --lexand:'Lexend Deca', sans-serif;
+    --Verydarkbluemainbackground: hsl(233, 47%, 7%);
+    --Darkdesaturatedbluecardbackgroun: hsl(244, 38%, 16%);
+    --Softvioletaccent: hsl(277, 64%, 61%);
+        /* Neutral*/
+
+    --White:hsl(0, 0%, 100%);
+    --Slightlytransparentwhitemainparagraph: hsla(0, 0%, 100%, 0.75);
+    --Slightlytransparentwhitestatheadings: hsla(0, 0%, 100%, 0.6);
+}
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+body{
+    background-color: var(--Verydarkbluemainbackground); 
+    color: var(--White);
+}
+/*card*/
+.container{
+  margin: 1em auto;
+  width: 90%;
+  margin-top: 1rem;
+  
+}
+@media(min-width:768px) {
+    .container{
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+}
+.cards{
+  display: flex;
+  justify-content: center;
+}
+@media(min-width:768px) {
+    .cards{
+      height: 100vh;
+      align-items: center;
+    }
+}
+.card{
+    background-color:var(--Darkdesaturatedbluecardbackgroun);
+    border-radius: 1rem;
+    overflow: hidden;
+    max-width: 400px; 
+}
+@media(min-width:768px) {
+  .card{
+    display: flex;
+    max-width: 1000px;
+  }
+}
+.card-col-img{
+  background-image: url(./images/image-header-mobile.jpg);
+  background-color: var(--Softvioletaccent);
+  background-blend-mode: multiply;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media(min-width:768px) {
+    .card-col-img{
+      width: 400px;
+      order: 2;
+      flex: 1;
+    }
+    .card-col-body{
+      order: 1;
+      flex: 1;
+    }
+}
+.card-col-body{
+ padding: 0 1rem ;
+ text-align: center;
+}
+.card-title{
+  color: var(--inter);
+  font-weight: 700;
+  padding: 0 2.5rem;
+
+}
+.card-title-span{
+  color:var(--Softvioletaccent);
+}
+.card-paragraph{
+  color: var(--Slightlytransparentwhitemainparagraph)
+}
+.footer-container{
+  /* padding-top: .1rem; */
+
+}
+@media(min-width:768px) {
+    .footer-container{
+      display: flex;
+      justify-content: space-between;
+    }
+}
+.footer-title{
+  font-family: var(--lexand);
+  font-size: 2rem;
+  margin-bottom: -.5rem;
+}
+.footer-text{
+  color: var(--Slightlytransparentwhitestatheadings);
+  text-transform: uppercase;
+  font-size: .8rem;
+  letter-spacing: 1px;
+}
+/*footer*/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
